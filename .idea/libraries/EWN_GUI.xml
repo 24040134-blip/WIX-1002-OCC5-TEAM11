@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="EWN_GUI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/EWN_GUI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
