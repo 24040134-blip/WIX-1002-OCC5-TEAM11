@@ -1,4 +1,4 @@
-// Store move information: piece ID, starting position, and target position.
+// Store move information: piece ID, starting position, and target position
 public class Move {
     private int pieceNum;   // Piece to move (1-6)
     private int fromPos;    // Starting position (0-99, excluding 22)
@@ -11,7 +11,7 @@ public class Move {
         this.toPos = toPos;
     }
 
-    // Getters: Access private fields (Note: Setters are not used at this stage).
+    // Getters: Access private fields (Note: Setters are not used at this stage)
     public int getPieceNum() {
         return pieceNum;
     }
