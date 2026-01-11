@@ -6,7 +6,7 @@ public class Move {
     private int fromPos;    // Starting position (0-99, excluding 22)
     private int toPos;      // Target position (0-99, excluding 22)
 
-    // Constructor: Initialize Move Information
+    
     // Constructor: Initialize move information
     public Move(int pieceNum, int fromPos, int toPos) {
         this.pieceNum = pieceNum;
