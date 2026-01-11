@@ -1,2 +1,6 @@
 # WIX-1002-OCC5-TEAM11
 Liu Xingyu 24040194
+Jiang Hongyi 24040134
+Zhang Yiming 24040033
+Gao Haifeng 24040136
+Wang Luning 
