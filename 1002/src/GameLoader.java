@@ -31,8 +31,6 @@ public class GameLoader {
             for (int i = 0; i < diceStr.length; i++) {
                 diceSequence[i] = Integer.parseInt(diceStr[i]);
             }
-
-            br.close();
         } catch (IOException e) {
 
             System.err.println("Failed to read the file. Check the file name:" + filename);
