@@ -20,7 +20,7 @@ public class RandomPlayer extends Player {
             return null;
         }
 
-        // Pick a random move
+        // Make a random number from 0 to (list size - 1) for a valid index
         int randomIndex = random.nextInt(possibleMoves.size());
         return possibleMoves.get(randomIndex);
     }
