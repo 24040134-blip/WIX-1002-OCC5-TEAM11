@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-
+// Ensure the code cannot be modified arbitrarily
 public class GameState {
     private int[] currentPositions; // Current positions of the 6 pieces (-1 indicates captured)
     private int targetPiece;        //Target piece
@@ -67,6 +67,8 @@ public class GameState {
     }
 
     //Find the currently movable pieces (according to the game rules)
+    // First, use findMovablePieces to filter uncaptured pieces: match by dice roll first
+    // if no match, pick the closest higher and lower-numbered pieces.
     private List<Integer> findMovablePieces() {
         List<Integer> movablePieces = new ArrayList<>();
         List<Integer> existingPieces = new ArrayList<>();
@@ -111,6 +113,8 @@ public class GameState {
     }
 
     // Execute move (update piece position, handle captures)
+    // Then generate 8-direction candidate positions for these pieces,
+    // check they’re within the 0-9 board and not forbidden position 22, and wrap legal positions into Move objects.
     public void executeMove(Move move) {
         int pieceIndex = move.getPieceNum() - 1;
         int fromPos = move.getFromPos();
@@ -129,6 +133,9 @@ public class GameState {
     }
 
     // Determine if victory is achieved (target piece reaches position 0)
+    // Only the preset target piece reaching position 0 counts as a win,
+    // verified by checking its index and position value.  The hasPossibleMoves method checks for legal moves
+    // if there are none, the game ends.
     public boolean isWinning() {
         int targetIndex = targetPiece - 1;
         return currentPositions[targetIndex] == 0;
